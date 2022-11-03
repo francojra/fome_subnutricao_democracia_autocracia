@@ -98,9 +98,22 @@ ggplot(fome2, aes(x = Year, y = por_subnut,
   geom_line(size = 1.2) +
   scale_color_manual(values = c("#88CCEE", "#CC6677",
                                 "#DDCC77", "#117733", 
-                                "#332288", "#AA4499")) +
+                                "#332288", "#AA4499"),
+                     labels = c("China", "Cuba", "Alemanha",
+                                "Japão", "Coreia do Norte", "Estados Unidos")) +
   labs(x = "Tempo (anos)", y = "Subnutrição (%)", col = "Países") +
   theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
   theme(axis.text = element_text(color = "black"))
   
-  
+ggplot(fome3, aes(x = Year, y = por_subnut, 
+                  group = Entity, color =  Entity)) +
+  geom_line(size = 2) +
+  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00'),
+                     labels = c("Brasil", "China", "Estados Unidos")) +
+  labs(x = "Tempo (anos)", y = "Subnutrição (%)", col = "Países") +
+  theme_light() +
+  theme(axis.title = element_text(size = 18),
+        axis.text = element_text(color = "black", size = 15),
+        legend.text = element_text(size = 12))
+
+
