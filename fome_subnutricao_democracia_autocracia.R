@@ -19,7 +19,20 @@
 ### subnutridas, onde elas vivem, subnutrição infantil, e insegurança alimentar em volta
 ### do mundo.
  
-# -
+### 8,9% da população mundial está subnutrida. Isso significa que ela tem um retorno calórico
+### abixo dos requerimentos mínimos.
+
+### 663 milhões de pessoas no mundo está subnutrida.
+
+### 22% de crianças menores que cinco anos estão 'raquíticas'. Elas são significativamente menores
+### que a média para a idade delas, como uma consequência de uma má nutrição ou de infecções
+### repetidas.
+
+### 9% da população mundial - cerca de 697 milhões de pessoas estão severamente em insegurança
+### alimentar.
+
+### Uma a cada quatro pessoas no mundo - 1,9 bilhões - estão moderadamente ou severamente em
+### insegurança alimnetar.
 
 
 
