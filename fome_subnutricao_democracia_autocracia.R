@@ -34,5 +34,22 @@
 ### Uma a cada quatro pessoas no mundo - 1,9 bilhões - estão moderadamente ou severamente em
 ### insegurança alimnetar.
 
+# Carregar pacotes -------------------------------------------------------------------------------------------------------------------------
 
+library(tidyverse)
+library(cols4all)
+library(hrbrthemes)
+library(ggthemes)
 
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
+
+fome <- read.csv("prevalence-of-undernourishment.csv")
+view(fome)
+names(fome)
+
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
+
+fome <- fome %>%
+  select(-Code) %>%
+  rename(por_subnut = Prevalence.of.undernourishment....of.population.) %>%
+  view()
