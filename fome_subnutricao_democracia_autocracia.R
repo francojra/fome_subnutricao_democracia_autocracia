@@ -83,12 +83,24 @@ ggplot(fome1, aes(x = fct_reorder(Entity, media),
                 width = 0.3, size = 0.8) +
   scale_fill_manual(values = c("#88CCEE", "#CC6677",
                                "#DDCC77", "#117733", 
-                                "#332288", "#AA4499")) +
+                               "#332288", "#AA4499")) +
   scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  scale_x_discrete(labels = c("Cuba", "Alemanha", "Estados Unidos",
+                              "Japão", "China", "Coreia do Norte")) +
   labs(x = "Países", y = "Subnutrição (%)") +
   theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
   theme(legend.position = "none",
         axis.text = element_text(color = "black"))
-  
+
+ggplot(fome2, aes(x = Year, y = por_subnut, 
+                  group = Entity, color =  Entity)) +
+  geom_point(shape = 15, size = 2.5) +
+  geom_line(size = 1.2) +
+  scale_color_manual(values = c("#88CCEE", "#CC6677",
+                                "#DDCC77", "#117733", 
+                                "#332288", "#AA4499")) +
+  labs(x = "Tempo (anos)", y = "Subnutrição (%)", col = "Países") +
+  theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
+  theme(axis.text = element_text(color = "black"))
   
   
