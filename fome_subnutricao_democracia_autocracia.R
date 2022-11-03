@@ -53,3 +53,27 @@ fome <- fome %>%
   select(-Code) %>%
   rename(por_subnut = Prevalence.of.undernourishment....of.population.) %>%
   view()
+
+fome1 <- fome %>%
+  filter(Entity %in% c("United States", "Germany", "Japan",
+                       "China", "North Korea", "Cuba")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(por_subnut),
+            sd = sd(por_subnut), n = n(),
+            se = sd/sqrt(n)) %>%
+  view()
+
+fome2 <- fome %>%
+  filter(Entity %in% c("United States", "Germany", "Japan",
+                       "China", "North Korea", "Cuba")) %>%
+  view()
+
+fome3 <- fome %>%
+  filter(Entity %in% c("United States", "China", "Brazil")) %>%
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
+
+  
+  
+  
