@@ -74,6 +74,21 @@ fome3 <- fome %>%
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
 
+c4a("safe", 6)
+
+ggplot(fome1, aes(x = fct_reorder(Entity, media), 
+                  y = media, fill = Entity)) +
+  geom_col(width = 0.9) +
+  geom_errorbar(aes(ymin = media - se, ymax = media + se),
+                width = 0.3, size = 0.8) +
+  scale_fill_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733", 
+                                "#332288", "#AA4499")) +
+  scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  labs(x = "Países", y = "Subnutrição (%)") +
+  theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
+  theme(legend.position = "none",
+        axis.text = element_text(color = "black"))
   
   
   
